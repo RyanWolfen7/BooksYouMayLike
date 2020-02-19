@@ -1,7 +1,8 @@
 import React from 'react'
+import BooksList from '../BooksList/BooksList'
 
 const App = ({ children }) => {
-    return <h1> Hello World</h1>
+    return <BooksList/>
 }
 
 export default App
