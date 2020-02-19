@@ -16,10 +16,7 @@ export const NavStyles = makeStyles(theme => ({
     title: {
         display: 'block',
         color: 'black',
-        width: '100%',
-        '&:hover': {
-            backgroundColor: '#FFF174'
-        }
+        width: '100%'
     },
     search: {
         position: 'relative',
