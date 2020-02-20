@@ -48,6 +48,7 @@ const NavBar = ({children}) => {
                     <Typography variant='h5' className={classes.title} noWrap>
                         Perlego
                     </Typography>
+                    {/* Refactor to new component when implimenting Functionality */}
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon/>
