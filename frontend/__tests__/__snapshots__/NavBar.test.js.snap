@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Nav to match snapshot 1`] = `undefined`;
+exports[`Snapshot testing Nav to match snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Snapshot testing NavMenue to match snapshot 1`] = `ShallowWrapper {}`;
