@@ -1,5 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot testing Nav to match snapshot 1`] = `ShallowWrapper {}`;
+exports[`Snapshot testing Nav to match snapshot 1`] = `
+<div
+  className="makeStyles-grow-2"
+>
+  <WithStyles(ForwardRef(AppBar))
+    className="makeStyles-bar-1"
+    position="static"
+  >
+    <WithStyles(ForwardRef(Toolbar))>
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-title-4"
+        noWrap={true}
+        variant="h5"
+      >
+        Perlego
+      </WithStyles(ForwardRef(Typography))>
+      <div
+        className="makeStyles-search-5"
+      >
+        <div
+          className="makeStyles-searchIcon-6"
+        >
+          <SearchIcon />
+        </div>
+        <WithStyles(ForwardRef(InputBase))
+          classes={
+            Object {
+              "input": "makeStyles-inputInput-8",
+              "root": "makeStyles-inputRoot-7",
+            }
+          }
+          inputProps={
+            Object {
+              "aria-label": "search",
+            }
+          }
+          placeholder="Search..."
+        />
+      </div>
+      <div
+        className="makeStyles-sectionDrawer-9"
+      >
+        <WithStyles(ForwardRef(IconButton))
+          aria-controls="NavMenu"
+          aria-haspopup="true"
+          aria-label="open drawer"
+          id="NavMenuButton"
+          onClick={[Function]}
+        >
+          <MenuIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </div>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
+  <WithStyles(ForwardRef(Menu))
+    anchorEl={null}
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    id="NavMenu"
+    keepMounted={true}
+    onClose={[Function]}
+    open={false}
+    transformOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+  >
+    <WithStyles(ForwardRef(MenuItem))>
+      <h1>
+        Hello
+      </h1>
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))>
+      <h2>
+        World
+      </h2>
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(ForwardRef(Menu))>
+</div>
+`;
 
-exports[`Snapshot testing NavMenue to match snapshot 1`] = `ShallowWrapper {}`;
+exports[`Snapshot testing NavMenue to match snapshot 1`] = `
+<WithStyles(ForwardRef(Menu))
+  anchorOrigin={
+    Object {
+      "horizontal": "right",
+      "vertical": "top",
+    }
+  }
+  id="NavMenu"
+  keepMounted={true}
+  open={false}
+  transformOrigin={
+    Object {
+      "horizontal": "right",
+      "vertical": "top",
+    }
+  }
+>
+  <WithStyles(ForwardRef(MenuItem))>
+    <h1>
+      Hello
+    </h1>
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))>
+    <h2>
+      World
+    </h2>
+  </WithStyles(ForwardRef(MenuItem))>
+</WithStyles(ForwardRef(Menu))>
+`;

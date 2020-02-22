@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Typography, InputBase, Toolbar, IconButton } from '@material-ui/core'
+import { AppBar, Typography, InputBase, Toolbar, IconButton, Link } from '@material-ui/core'
 import  SearchIcon from '@material-ui/icons/Search'
 import MenuIcon from '@material-ui/icons/Menu';
 import { NavStyles } from '../../styles/NavBarStyles'
@@ -22,7 +22,9 @@ const NavBar = ({children}) => {
             <AppBar position='static' className={classes.bar}>
                 <Toolbar>
                     <Typography variant='h5' className={classes.title} noWrap>
-                        Perlego
+                        <Link className={classes.homeLink} href='https://www.perlego.com/' color='inherit'>
+                            Perlego
+                        </Link>
                     </Typography>
                     {/* Refactor to new component when implimenting Functionality */}
                     <div className={classes.search}>

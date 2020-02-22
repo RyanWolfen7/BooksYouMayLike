@@ -34,6 +34,17 @@ export const NavStyles = makeStyles(theme => ({
             width: 'auto',
         },
     },
+    homeLink: {
+        '&:hover': {
+            transition: '2s', 
+            textDecoration: 'none',
+            backgroundColor:'#FFF174',
+            borderRadius: '30%'
+        },
+        '&:hover::after': {
+            transition: '2s', 
+        }
+    },
     searchIcon: {
         color: 'black',
         width: theme.spacing(7),
