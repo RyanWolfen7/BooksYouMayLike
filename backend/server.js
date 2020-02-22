@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({extended: true}))
 var cors = require('cors');
 app.use(cors())
 
+// Routes
+require('./app/routes/books.routes')
+
 app.listen(port, () => {
     console.log('Server is live on port 3005')
 })
