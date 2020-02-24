@@ -10,7 +10,7 @@ var cors = require('cors');
 app.use(cors())
 
 // Routes
-require('./app/routes/books.routes')
+require('./app/routes/books.routes')(app)
 
 app.listen(port, () => {
     console.log('Server is live on port 3005')
