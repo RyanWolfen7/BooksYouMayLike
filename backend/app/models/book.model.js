@@ -1,7 +1,7 @@
 const sql = require('../db.js')
 
 const Books = books => {
-    this.books = books
+    this.books = books.books
 } 
 
 Books.getAll = result => {
@@ -15,3 +15,5 @@ Books.getAll = result => {
     result(null, res)
     })
 }
+
+module.exports = Books

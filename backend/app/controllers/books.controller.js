@@ -1,6 +1,7 @@
 const Books = require('../models/book.model')
 
 exports.findAll = (req, res) => {
+    // === DB modal ===
     // Books.getAll( (err, data) => {
     //     if (err) {
     //         res.status(500).send({
@@ -11,5 +12,7 @@ exports.findAll = (req, res) => {
     //         res.send(data)
     //     }
     // })
-    res.send('hello world')
+
+    // === Mock DB ===
+    res.send('test')
 }
