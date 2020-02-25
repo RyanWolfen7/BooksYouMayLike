@@ -1,5 +1,5 @@
 import {
-    GET_BOOK_LIST, GET_BOOK_LIST_SUCCESS, GET_BOOK_LIST_FAILURE, GET_BOOKS_LIST
+    GET_BOOKS_LIST, GET_BOOK_LIST_SUCCESS, GET_BOOK_LIST_FAILURE
 } from '../types'
 import { Anyaction } from 'redux'
 
