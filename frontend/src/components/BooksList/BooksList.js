@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { withRouter, RouteComponentProps } from 'react-router'
 import { Paper, Grid } from '@material-ui/core'
 import { BookListStyles } from '../../styles/BooksListStyles'
+import actions from '../../actions'
 
 const BooksList = props => {
     const classes = BookListStyles()
-    // fake for purpose of styling remove later
-    const [ booksList, setBooksList ] = useState(['a','b','c','d'])
+    const { isLoading, booksList, error } = useSelector((state) => state.booksList)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(actions.booksList.getBooksList())
+    },[])
 
     const renderBookCards = () => {
         return booksList.map( book => {

@@ -1,5 +1,5 @@
 import {
-    GET_BOOKS_LIST, GET_BOOK_LIST_SUCCESS, GET_BOOK_LIST_FAILURE
+    GET_BOOKS_LIST, GET_BOOKS_LIST_SUCCESS, GET_BOOKS_LIST_FAILURE
 } from '../types'
 
 const initialState = {
@@ -16,13 +16,13 @@ export default (state = initialState, action) => {
                 ...state,
                 isLoading: true
             }
-        case GET_BOOK_LIST_SUCCESS:
+        case GET_BOOKS_LIST_SUCCESS:
             return {
                 ...state,
                 data: action.payload.data,
                 isLoading: false
             }
-        case GET_BOOK_LIST_FAILURE:
+        case GET_BOOKS_LIST_FAILURE:
             return {
                 ...state,
                 error: action.error.response.data,
