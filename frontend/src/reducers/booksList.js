@@ -1,7 +1,6 @@
 import {
     GET_BOOKS_LIST, GET_BOOK_LIST_SUCCESS, GET_BOOK_LIST_FAILURE
 } from '../types'
-import { Anyaction } from 'redux'
 
 const initialState = {
     isLoading: false,

@@ -14,21 +14,27 @@ exports[`Snapshot testing Nav to match snapshot 1`] = `
         noWrap={true}
         variant="h5"
       >
-        Perlego
+        <WithStyles(ForwardRef(Link))
+          className="makeStyles-homeLink-6"
+          color="inherit"
+          href="https://www.perlego.com/"
+        >
+          Perlego
+        </WithStyles(ForwardRef(Link))>
       </WithStyles(ForwardRef(Typography))>
       <div
         className="makeStyles-search-5"
       >
         <div
-          className="makeStyles-searchIcon-6"
+          className="makeStyles-searchIcon-7"
         >
           <SearchIcon />
         </div>
         <WithStyles(ForwardRef(InputBase))
           classes={
             Object {
-              "input": "makeStyles-inputInput-8",
-              "root": "makeStyles-inputRoot-7",
+              "input": "makeStyles-inputInput-9",
+              "root": "makeStyles-inputRoot-8",
             }
           }
           inputProps={
@@ -40,7 +46,7 @@ exports[`Snapshot testing Nav to match snapshot 1`] = `
         />
       </div>
       <div
-        className="makeStyles-sectionDrawer-9"
+        className="makeStyles-sectionDrawer-10"
       >
         <WithStyles(ForwardRef(IconButton))
           aria-controls="NavMenu"
