@@ -12,4 +12,9 @@ export const BookListStyles = makeStyles(theme => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    loader: {
+        position: 'fixed',
+        top: '50%',
+        left: '50%'
+    }
 }));
