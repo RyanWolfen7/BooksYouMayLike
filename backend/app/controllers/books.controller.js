@@ -12,7 +12,4 @@ exports.findAll = (req, res) => {
             res.send(data)
         }
     })
-
-    // === Mock DB ===
-    res.send('test')
 }
