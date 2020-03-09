@@ -19,7 +19,7 @@ export default (state = initialState, action) => {
         case GET_BOOKS_LIST_SUCCESS:
             return {
                 ...state,
-                data: action.payload.data,
+                booksList: action.payload.data,
                 isLoading: false
             }
         case GET_BOOKS_LIST_FAILURE:
