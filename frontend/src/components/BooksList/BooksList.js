@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
-import {  Grid, CircularProgress, GridList, GridListTile, GridListTileBar } from '@material-ui/core'
+import { Typography, Grid, CircularProgress, GridList, GridListTile, GridListTileBar } from '@material-ui/core'
 import { BookListStyles } from '../../styles/BooksListStyles'
 import actions from '../../actions'
 
@@ -47,6 +47,7 @@ const BooksList = props => {
 
     return (
         <Grid item xs={6} className={classes.scrollList}>
+            <Typography align={'center'} variant={'overline'}> Your Books </Typography>
             { isLoading && <CircularProgress className={classes.loader} />}
             { !error && <GridList cols={getGridListCols()} cellHeight={'auto'} className={classes.gridList}>
                 {renderBookCards()}

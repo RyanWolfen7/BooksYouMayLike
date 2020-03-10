@@ -18,7 +18,7 @@ export const BookListStyles = makeStyles(theme => ({
         }
     },
     root: {
-        padding: 10,
+        padding: 15,
         flexGrow: 1
     },
     scrollList: {
