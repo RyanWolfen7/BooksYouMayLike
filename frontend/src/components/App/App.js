@@ -7,14 +7,15 @@ const App = ({ children }) => {
     const classes = AppStyles()
     const [leftViewRender, setLeftViewRender] = useState({
         summary: false,
-        selectedBook: null
+        selectedBook: null,
     })
 
     const handleLeftRender = ( type, book) => {
         if ( book === leftViewRender.selectedBook || leftViewRender[type] === false ) {
-            setLeftViewRender({...leftViewRender, [type]: !leftViewRender[type], selectedBook: book })
+            const data = {[type]: !leftViewRender[type], selectedBook: !leftViewRender[type] ? book : null}
+            setLeftViewRender({...leftViewRender, ...data})
         } else {
-            setLeftViewRender({...setLeftViewRender, selectedBook: book})
+            setLeftViewRender({...leftViewRender, ...{ selectedBook: book }})
         }
     }
 
