@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
-import { Typography, Grid, CircularProgress, GridList, GridListTile, GridListTileBar } from '@material-ui/core'
+import { Typography, Grid, CircularProgress, GridList, GridListTile, GridListTileBar, IconButton } from '@material-ui/core'
+import EditIcon from '@material-ui/icons/Edit'
+import DeleteIcon from '@material-ui/icons/Delete'
 import { BookListStyles } from '../../styles/BooksListStyles'
 import actions from '../../actions'
 
@@ -15,8 +17,8 @@ const BooksList = props => {
         dispatch(actions.booksList.getBooksList())
     },[])
 
-    const handleViewSummary = book => {
-        handleLeftRender('summary', book)
+    const handleView = ( type, book ) => {
+        handleLeftRender(type, book)
     }
 
     const renderBookCards = () => {
@@ -26,12 +28,18 @@ const BooksList = props => {
                     <img 
                         className={classes.img} 
                         src={book.cover} 
-                        alt={book.title}
-                        onClick={() => handleViewSummary(book)}
+                        alt={book.name}
+                        onClick={() => handleView( 'summary' , book)}
                     />
                     <GridListTileBar
+                        className={classes.titleBar}
                         title={book.name}
                         subtitle={<span>by: {book.writer}</span>}
+                        actionIcon={
+                            <IconButton aria-label={`edit ${book.name}`} onClick={() => handleView( 'edit', book)}>
+                                <EditIcon className={classes.editIcon}/>
+                            </IconButton>
+                        }
                     />
                 </GridListTile>
             )

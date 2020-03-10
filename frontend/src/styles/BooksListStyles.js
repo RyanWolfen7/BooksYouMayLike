@@ -21,6 +21,9 @@ export const BookListStyles = makeStyles(theme => ({
         padding: 15,
         flexGrow: 1
     },
+    titleBar: {
+        
+    },
     scrollList: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -47,6 +50,10 @@ export const BookListStyles = makeStyles(theme => ({
         '&:hover': {
             cursor: 'pointer',
         },
+    },
+    editIcon: {
+        color: '#FFffff',
+        flexGrow: 1
     },
     loader: {
         position: 'fixed',
