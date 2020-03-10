@@ -30,6 +30,11 @@ export const BookListStyles = makeStyles(theme => ({
     },
     details: {
     },
+    header: {
+        color: 'black',
+        backgroundColor: '#FFF174',
+        width: '100%'
+    },
     gridList: {
         display: 'flex',
         flexWrap: 'wrap',

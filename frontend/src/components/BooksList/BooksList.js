@@ -47,7 +47,7 @@ const BooksList = props => {
 
     return (
         <Grid item xs={6} className={classes.scrollList}>
-            <Typography align={'center'} variant={'overline'}> Your Books </Typography>
+            <Typography className={classes.header} align={'center'} variant={'overline'}> Your Books </Typography>
             { isLoading && <CircularProgress className={classes.loader} />}
             { !error && <GridList cols={getGridListCols()} cellHeight={'auto'} className={classes.gridList}>
                 {renderBookCards()}
