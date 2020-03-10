@@ -38,7 +38,10 @@ export const BookListStyles = makeStyles(theme => ({
     img: {
         flexGrow: 1,
         width: '100%',
-        height: '100%'
+        height: '100%',
+        '&:hover': {
+            cursor: 'pointer',
+        },
     },
     loader: {
         position: 'fixed',
