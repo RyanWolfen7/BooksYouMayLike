@@ -12,6 +12,7 @@ const App = ({ children }) => {
         edit: false,
         selectedBook: null,
     })
+    const isMobile = window.innerWidth <= 500;
 
     const handleLeftRender = ( type, book) => {
         const defaultLeftView = { summary: false, edit: false}
@@ -28,11 +29,11 @@ const App = ({ children }) => {
     <Grid container className={classes.root} spacing={2}>
         <Grid item xs={6} className={classes.details}>
             { leftViewRender.summary && <SummaryView book={leftViewRender.selectedBook}/>}
-            { leftViewRender.edit && <EditBook/>}
+            { leftViewRender.edit && <EditBook book={leftViewRender.selectedBook}/>}
         </Grid>
-        <BooksList
+        {<BooksList
             handleLeftRender={handleLeftRender}
-        />
+        />}
     </Grid>
     )
 }

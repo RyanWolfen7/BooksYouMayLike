@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
 import { Typography, Grid, CircularProgress, GridList, GridListTile, GridListTileBar, IconButton } from '@material-ui/core'
 import EditIcon from '@material-ui/icons/Edit'
-import DeleteIcon from '@material-ui/icons/Delete'
 import { BookListStyles } from '../../styles/BooksListStyles'
 import actions from '../../actions'
 
