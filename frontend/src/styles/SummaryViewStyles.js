@@ -20,5 +20,24 @@ export const SummaryViewStyles = makeStyles(theme => ({
     root: {
         padding: 10,
         flexGrow: 1
-    }
+    },
+    info: {
+        height: '88vh'
+    },
+    summary: {
+        flexGrow: 1,
+        padding: '10px',
+        width: '100%'
+    },
+    content: {
+        padding: '1rem 0 1rem'
+    },
+    header: {
+        backgroundColor: '#FFF174'
+    },
+    gridList: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        height: '60vh',
+    },
 }));
