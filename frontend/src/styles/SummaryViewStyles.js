@@ -38,6 +38,6 @@ export const SummaryViewStyles = makeStyles(theme => ({
     gridList: {
         display: 'flex',
         flexWrap: 'wrap',
-        height: '60vh',
+        height: '40vh',
     },
 }));
