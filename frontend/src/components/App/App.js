@@ -11,7 +11,11 @@ const App = ({ children }) => {
     })
 
     const handleLeftRender = ( type, book) => {
-        setLeftViewRender({...leftViewRender, [type]: !leftViewRender[type], selectedBook: book })
+        if ( book === leftViewRender.selectedBook || leftViewRender[type] === false ) {
+            setLeftViewRender({...leftViewRender, [type]: !leftViewRender[type], selectedBook: book })
+        } else {
+            setLeftViewRender({...setLeftViewRender, selectedBook: book})
+        }
     }
 
     console.log(leftViewRender)
