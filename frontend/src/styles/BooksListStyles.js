@@ -4,13 +4,27 @@ import {
 
 export const BookListStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1,
-        margin: '3rem 0 0',
+        padding: 10,
+        flexGrow: 1
     },
-    paper: {
-        padding: theme.spacing(3),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
+    scrollList: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper,
+    },
+    details: {
+    },
+    gridList: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        height: '85vh',
+    },
+    img: {
+        flexGrow: 1,
+        width: '100%',
+        height: '100%'
     },
     loader: {
         position: 'fixed',
