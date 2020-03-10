@@ -1,3 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App to match snapshot 1`] = `<BooksList />`;
+exports[`App to match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  className="makeStyles-root-1"
+  container={true}
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={6}
+  />
+  <WithWidth(BooksList)
+    handleLeftRender={[Function]}
+  />
+</WithStyles(ForwardRef(Grid))>
+`;

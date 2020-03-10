@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`view to match snapshot 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="makeStyles-info-2"
+/>
+`;
