@@ -34,16 +34,11 @@ const BooksList = props => {
     }
 
     return (
-        <Grid container className={classes.root} spacing={2}>
-            <Grid item xs={6} className={classes.details}>
-                test
-            </Grid>
-            <Grid item xs={6} className={classes.scrollList}>
-                { isLoading && <CircularProgress className={classes.loader} />}
-                <GridList cols={getGridListCols()} cellHeight={'auto'} className={classes.gridList}>
-                    {renderBookCards()}
-                </GridList>
-            </Grid>
+        <Grid item xs={6} className={classes.scrollList}>
+            { isLoading && <CircularProgress className={classes.loader} />}
+            <GridList cols={getGridListCols()} cellHeight={'auto'} className={classes.gridList}>
+                {renderBookCards()}
+            </GridList>
         </Grid>
     )
 }
