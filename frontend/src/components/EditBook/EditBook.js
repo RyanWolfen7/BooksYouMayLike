@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { TextField, Container, Button, Grid } from '@material-ui/core'
 import { EditBookStyles } from '../../styles/EditBookStyle'
 import { Save as SaveIcon, Delete as DeleteIcon }from '@material-ui/icons'
-
-
+import actions from '../../actions'
 
 const EditBook = props => {
     const classes = EditBookStyles()
     const [book, setBook] = useState(props.book)
+    const dispatch = useDispatch()
     const date = new Date(book.date_published * 1000).toISOString().split('T')[0]
 
     const onChange = event => {
@@ -16,6 +17,10 @@ const EditBook = props => {
             value = (new Date(value).getTime() / 1000).toString()
         }
         setBook({...book, ...{ [event.target.id]: value } })
+    }
+
+    const handleSave = () => {
+        dispatch(actions.booksList.updateBook(book))
     }
 
     return (
@@ -67,6 +72,7 @@ const EditBook = props => {
                             varient="contained"
                             className={classes.save}
                             startIcon={<SaveIcon/>}
+                            onClick={() => handleSave()}
                         > Save </Button>
                         <Button
                             varient="contained"
