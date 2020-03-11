@@ -11,9 +11,21 @@ Books.getAll = result => {
             result(null, err);
             return;
         }
-    console.log("customers: ", res);
-    result(null, res)
+        console.log("books: ", res);
+        result(null, res)
     })
+}
+
+Books.findAndUpdateOne = (book, result) => {
+    sql.query("UPDATE books SET ? WHERE ?"), [book, book._id], (err, res) => {
+        if(err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+        console.log("book: ", res);
+        result(null, res)
+    }
 }
 
 module.exports = Books

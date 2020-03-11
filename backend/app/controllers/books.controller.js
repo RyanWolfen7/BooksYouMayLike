@@ -13,3 +13,18 @@ exports.findAll = (req, res) => {
         }
     })
 }
+
+exports.updateBook = (req, res) => {
+    const book = req.body
+
+    Books.findAndUpdateOne( book, (err, res) => {
+        if (err) {
+            res.status(500).send({
+                message:
+                    err.message || 'Some error Occured'
+            })
+        } else {
+            res.send(res)
+        }
+    })
+}
