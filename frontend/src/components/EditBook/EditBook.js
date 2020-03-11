@@ -1,5 +1,5 @@
-import React from 'react'
-import { TextField, TextareaAutosize, Container, Paper, Button, Grid } from '@material-ui/core'
+import React, { useState } from 'react'
+import { TextField, Container, Button, Grid } from '@material-ui/core'
 import { EditBookStyles } from '../../styles/EditBookStyle'
 import SaveIcon from '@material-ui/icons/Save'
 import DeleteIcon from '@material-ui/icons/Delete'
@@ -7,8 +7,16 @@ import DeleteIcon from '@material-ui/icons/Delete'
 
 const EditBook = props => {
     const classes = EditBookStyles()
-    const book = props.book
+    const [book, setBook] = useState(props.book)
     const date = new Date(book.date_published * 1000).toISOString().split('T')[0]
+
+    const onChange = event => {
+        let value = event.target.value
+        if (event.target.id === 'date_published') {
+            value = (new Date(value).getTime() / 1000).toString()
+        }
+        setBook({...book, ...{ [event.target.id]: value } })
+    }
 
     return (
         <Container className={classes.container}>
@@ -20,12 +28,14 @@ const EditBook = props => {
                         rowsMax="4"
                         value={book.name}
                         width={1}
+                        onChange={event => onChange(event)}
                     />
                     <TextField
                         id="writer"
                         label="Writer"
                         value={book.writer}
                         width={1}
+                        onChange={event => onChange(event)}
                     />
                     <TextField
                         id="date_published"
@@ -34,12 +44,14 @@ const EditBook = props => {
                         variant="outlined"
                         value={date}
                         width={1}
+                        onChange={event => onChange(event)}
                     />
                     <TextField
                         id="cover"
                         label="Cover URL"
                         value={book.cover}
                         width={1}
+                        onChange={event => onChange(event)}
                     />
                     <TextField
                         id="summary"
@@ -48,6 +60,7 @@ const EditBook = props => {
                         rowsMax="4"
                         value={book.summary}
                         width={1}
+                        onChange={event => onChange(event)}
                     />
                     <Grid container justify='center'>
                         <Button
