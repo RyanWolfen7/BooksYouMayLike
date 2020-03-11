@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { TextField, Container, Button, Grid } from '@material-ui/core'
 import { EditBookStyles } from '../../styles/EditBookStyle'
-import SaveIcon from '@material-ui/icons/Save'
-import DeleteIcon from '@material-ui/icons/Delete'
+import { Save as SaveIcon, Delete as DeleteIcon }from '@material-ui/icons'
+
 
 
 const EditBook = props => {
