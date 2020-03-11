@@ -1,7 +1,9 @@
 import React from 'react'
-import { TextField, TextareaAutosize, Container, Paper } from '@material-ui/core'
+import { TextField, TextareaAutosize, Container, Paper, Button, Grid } from '@material-ui/core'
 import { EditBookStyles } from '../../styles/EditBookStyle'
-import booksList from '../../actions/booksList'
+import SaveIcon from '@material-ui/icons/Save'
+import DeleteIcon from '@material-ui/icons/Delete'
+
 
 const EditBook = props => {
     const classes = EditBookStyles()
@@ -47,8 +49,18 @@ const EditBook = props => {
                         value={book.summary}
                         width={1}
                     />
-                    <button> Save </button>
-                    <button>delete</button>
+                    <Grid container justify='center'>
+                        <Button
+                            varient="contained"
+                            className={classes.save}
+                            startIcon={<SaveIcon/>}
+                        > Save </Button>
+                        <Button
+                            varient="contained"
+                            className={classes.delete}
+                            startIcon={<DeleteIcon/>}
+                        > Delete </Button>
+                    </Grid>
             </form>
         </Container>
     

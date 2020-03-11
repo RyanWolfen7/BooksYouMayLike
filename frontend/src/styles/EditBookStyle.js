@@ -46,5 +46,15 @@ export const EditBookStyles = makeStyles(theme => ({
     },
     summary: {
         flexGrow: 1
+    },
+    save: {
+        backgroundColor: '#1A76D2',
+        color: 'white',
+        margin: '.5rem'
+    },
+    delete: {
+        backgroundColor: 'red',
+        color: 'white',
+        margin: '.5rem'
     }
 }));
