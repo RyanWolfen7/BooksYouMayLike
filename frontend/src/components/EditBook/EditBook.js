@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, TextareaAutosize } from '@material-ui/core'
+import { TextField, TextareaAutosize, Container, Paper } from '@material-ui/core'
 import { EditBookStyles } from '../../styles/EditBookStyle'
 import booksList from '../../actions/booksList'
 
@@ -9,42 +9,49 @@ const EditBook = props => {
     const date = new Date(book.date_published * 1000).toISOString().split('T')[0]
 
     return (
-        <form className={classes.form} autoComplete='off'>
-            <div>
-                <TextField
-                    id="name"
-                    label="Name"
-                    multiline
-                    rowsMax="4"
-                    value={book.name}
-                />
-                <TextField
-                    id="writer"
-                    label="Writer"
-                    value={book.writer}
-                />
-                <TextField
-                    id="date_published"
-                    label="Date Published"
-                    type='date'
-                    variant="outlined"
-                    value={date}
-                />
-                <TextField
-                    id="cover"
-                    label="Cover URL"
-                    value={book.cover}
-                />
-                <TextField
-                    id="standard-multiline-static"
-                    label="Summary"
-                    multiline
-                    rowsMax="4"
-                    value={book.summary}
-                    className={classes.summary}
-                />
-            </div>
-        </form>
+        <Container className={classes.container}>
+            <form className={classes.form} autoComplete='off'>
+                    <TextField
+                        id="name"
+                        label="Name"
+                        multiline
+                        rowsMax="4"
+                        value={book.name}
+                        width={1}
+                    />
+                    <TextField
+                        id="writer"
+                        label="Writer"
+                        value={book.writer}
+                        width={1}
+                    />
+                    <TextField
+                        id="date_published"
+                        label="Date Published"
+                        type='date'
+                        variant="outlined"
+                        value={date}
+                        width={1}
+                    />
+                    <TextField
+                        id="cover"
+                        label="Cover URL"
+                        value={book.cover}
+                        width={1}
+                    />
+                    <TextField
+                        id="summary"
+                        label="Summary"
+                        multiline
+                        rowsMax="4"
+                        value={book.summary}
+                        width={1}
+                    />
+                    <button> Save </button>
+                    <button>delete</button>
+            </form>
+        </Container>
+    
     )
 }
 

@@ -21,13 +21,30 @@ export const EditBookStyles = makeStyles(theme => ({
         padding: 15,
         flexGrow: 1
     },
+    container: {
+        display: 'flex',
+        flexWrap: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#FFF174',
+        height: '85vh'
+    },
+    paper: {
+        flexGrow: 1,
+        backgroundColor: '#ffffff',
+        margin: 'auto'
+    },
     form: {
+        flexGrow: 1,
+        backgroundColor: '#ffffff',
+        margin: 'auto',
         '& .MuiTextField-root': {
             margin: theme.spacing(3),
-            width: 200,
+            width: '41.5vw',
+            flexGrow: 1
         }
     },
     summary: {
-        
+        flexGrow: 1
     }
 }));
