@@ -15,8 +15,8 @@ const NavMenu = props => {
             open={Boolean(menuAnchor)}
             onClose={handleMenuClose}
         >
-        <MenuItem >
-            <h3> Add Book To Your List</h3>
+            <MenuItem onClick={() => history.push('/addBook')}>
+                Add Book To Your List
             </MenuItem>
         </Menu>
     )
