@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import App from './components/App/App'
+import MainView from './components/MainView/MainView';
 
 export default () => {
     return (
         <Switch>
             <Route
-                component={App}
+                component={MainView}
                 exact
                 path={'/'}
             />

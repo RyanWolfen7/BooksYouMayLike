@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import { withRouter } from 'react-router'
 import { AppBar, Typography, InputBase, Toolbar, IconButton, Link } from '@material-ui/core'
 import  SearchIcon from '@material-ui/icons/Search'
 import MenuIcon from '@material-ui/icons/Menu';
 import { NavStyles } from '../../styles/NavBarStyles'
 import NavMenu from './NavMenu'
 
-const NavBar = ({children}) => {
+const NavBar = props => {
     const classes = NavStyles()
     const [menuAnchor, setMenuAnchor] = useState(null)
 
@@ -53,9 +54,9 @@ const NavBar = ({children}) => {
                     </div>
                 </Toolbar>
             </AppBar>
-            {NavMenu({menuAnchor, handleMenuClose})}
+            {NavMenu({menuAnchor, handleMenuClose })}
         </div>
     )
 }
 
-export default NavBar
+export default withRouter(NavBar)
