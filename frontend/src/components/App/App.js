@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 import { AppStyles } from '../../styles/AppStyles'
 import BooksList from '../BooksList/BooksList'
 import SummaryView from '../SummaryView/SummaryView'
-import EditBook from '../EditBook/EditBook'
+import SaveBookForm from '../SaveBookForm/SaveBookForm'
 
 const App = ({ children }) => {
     const classes = AppStyles()
@@ -28,7 +28,7 @@ const App = ({ children }) => {
     <Grid container className={classes.root} spacing={2}>
         <Grid item xs={6} className={classes.details}>
             { leftViewRender.summary && <SummaryView book={leftViewRender.selectedBook}/>}
-            { leftViewRender.edit && <EditBook book={leftViewRender.selectedBook}/>}
+            { leftViewRender.edit && <SaveBookForm book={leftViewRender.selectedBook}/>}
         </Grid>
         {<BooksList
             handleLeftRender={handleLeftRender}

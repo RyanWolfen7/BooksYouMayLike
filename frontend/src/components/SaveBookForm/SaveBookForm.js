@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { TextField, Container, Button, Grid } from '@material-ui/core'
-import { EditBookStyles } from '../../styles/EditBookStyle'
+import { SaveBookFormStyles } from '../../styles/SaveBookFormStyles'
 import { Save as SaveIcon, Delete as DeleteIcon }from '@material-ui/icons'
 import actions from '../../actions'
 
-const EditBook = props => {
-    const classes = EditBookStyles()
+const SaveBookForm = props => {
+    const classes = SaveBookFormStyles()
     const [book, setBook] = useState(props.book)
     const dispatch = useDispatch()
     const date = new Date(book.date_published * 1000).toISOString().split('T')[0]
@@ -87,4 +87,4 @@ const EditBook = props => {
     )
 }
 
-export default EditBook
+export default SaveBookForm

@@ -2,7 +2,7 @@ import {
     makeStyles
 } from '@material-ui/core/styles';
 
-export const EditBookStyles = makeStyles(theme => ({
+export const SaveBookFormStyles = makeStyles(theme => ({
     '@global': {
         '*::-webkit-scrollbar': {
             width: '0.4em',

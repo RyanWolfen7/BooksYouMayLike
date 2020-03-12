@@ -17,10 +17,7 @@ const NavMenu = ({ menuAnchor, handleMenuClose }) => {
                 // add real items later 
             }
             <MenuItem>
-            <h1>Hello</h1>
-            </MenuItem>
-            <MenuItem>
-            <h2>World</h2>
+            <h3> Add Book To Your List</h3>
             </MenuItem>
         </Menu>
     )
