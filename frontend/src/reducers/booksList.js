@@ -9,7 +9,6 @@ const initialState = {
     book: {},
     error: null 
 }
-
 export default (state = initialState, action) => {
     switch(action.type) {
         case GET_BOOKS_LIST:
@@ -37,7 +36,7 @@ export default (state = initialState, action) => {
         case PUT_BOOK_SUCCESS:
             return {
                 ...state,
-                book: action.payload.data,
+                data: action.payload.data,
                 isLoading: false
             }
         case PUT_BOOK_FAILURE:

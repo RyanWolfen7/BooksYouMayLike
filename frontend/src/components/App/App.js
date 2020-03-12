@@ -12,7 +12,6 @@ const App = ({ children }) => {
         edit: false,
         selectedBook: null,
     })
-    const isMobile = window.innerWidth <= 500;
 
     const handleLeftRender = ( type, book) => {
         const defaultLeftView = { summary: false, edit: false}

@@ -11,7 +11,7 @@ const BooksList = props => {
     const { isLoading, booksList, error } = useSelector((state) => state.booksList)
     const dispatch = useDispatch()
     const handleLeftRender = props.handleLeftRender
-
+    
     useEffect(() => {
         dispatch(actions.booksList.getBooksList())
     },[])

@@ -21,6 +21,7 @@ const EditBook = props => {
 
     const handleSave = () => {
         dispatch(actions.booksList.updateBook(book))
+        window.location.reload(false)
     }
 
     return (
