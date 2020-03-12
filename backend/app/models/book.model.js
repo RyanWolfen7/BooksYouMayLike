@@ -17,15 +17,17 @@ Books.getAll = result => {
 }
 
 Books.findAndUpdateOne = (book, result) => {
-    sql.query("UPDATE books SET ? WHERE ?"), [book, book._id], (err, res) => {
+    const query = "UPDATE books set name =? , writer =? , date_published =? , cover =? , summary =? WHERE _id = ?"
+
+    sql.query(query, [book.name, book.writer, book.date_published, book.cover, book.summary, book._id], (err, res) => {
         if(err) {
             console.log("error: ", err);
             result(null, err);
-            return;
+            return
         }
         console.log("book: ", res);
         result(null, res)
-    }
+    })
 }
 
 module.exports = Books

@@ -17,14 +17,14 @@ exports.findAll = (req, res) => {
 exports.updateBook = (req, res) => {
     const book = req.body
 
-    Books.findAndUpdateOne( book, (err, res) => {
+    Books.findAndUpdateOne( book, (err, data) => {
         if (err) {
             res.status(500).send({
                 message:
                     err.message || 'Some error Occured'
             })
         } else {
-            res.send(res)
+            res.send(data)
         }
     })
 }
