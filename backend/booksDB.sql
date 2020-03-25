@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`books` (
   `writer` VARCHAR(45) NULL,
   `date_published` VARCHAR(100) NULL,
   `cover` VARCHAR(100) NULL,
+  `summary` VARCHAR(10000) NULL,
   PRIMARY KEY (`_id`))
 ENGINE = MEMORY;
 
@@ -39,11 +40,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `mydb`;
-INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`) VALUES (1, 'Black Company', 'Glen Cook', '454896000', 'https://upload.wikimedia.org/wikipedia/en/thumb/9/97/The_Black_Company.jpg/220px-The_Black_Company.jpg');
-INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`) VALUES (2, 'Black Company Shadows Linger', 'Glen Cook', '465433200', 'https://images-na.ssl-images-amazon.com/images/I/51In8kfvluL._SX307_BO1,204,203,200_.jpg');
-INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`) VALUES (3, 'Black Company The White Rose', 'Glen Cook', '481158000', 'https://images-na.ssl-images-amazon.com/images/I/61bHDPcN5sL._SX304_BO1,204,203,200_.jpg');
-INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`) VALUES (4, 'Common Sense', 'Thomas Paine', '-6108911925', 'https://images-na.ssl-images-amazon.com/images/I/41zVBk2NjUL.jpg');
-INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`) VALUES (5, 'Starship Troopers', 'Robert A. Heinlein', '-320889600', 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1304018517l/573833.jpg');
+INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`, `summary`) VALUES (1, 'Black Company', 'Glen Cook', '454896000', 'https://upload.wikimedia.org/wikipedia/en/thumb/9/97/The_Black_Company.jpg/220px-The_Black_Company.jpg');
+INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`, `summary`) VALUES (2, 'Black Company Shadows Linger', 'Glen Cook', '465433200', 'https://images-na.ssl-images-amazon.com/images/I/51In8kfvluL._SX307_BO1,204,203,200_.jpg');
+INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`, `summary`) VALUES (3, 'Black Company The White Rose', 'Glen Cook', '481158000', 'https://images-na.ssl-images-amazon.com/images/I/61bHDPcN5sL._SX304_BO1,204,203,200_.jpg');
+INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`, `summary`) VALUES (4, 'Common Sense', 'Thomas Paine', '-6108911925', 'https://images-na.ssl-images-amazon.com/images/I/41zVBk2NjUL.jpg');
+INSERT INTO `mydb`.`books` (`_id`, `name`, `writer`, `date_published`, `cover`, `summary`) VALUES (5, 'Starship Troopers', 'Robert A. Heinlein', '-320889600', 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1304018517l/573833.jpg');
 
 COMMIT;
 
